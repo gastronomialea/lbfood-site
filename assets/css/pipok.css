@@ -1,0 +1,139 @@
+/* Pipok — segue o Manual de Marca (Fraunces Black + DM Sans, marrom, bege/caramelo, dourado e listras) */
+:root {
+  --brown: #5A3520;
+  --brown-2: #6B4226;
+  --beige-a: #E6CDAA;
+  --beige-b: #D2AE86;
+  --caramel-a: #BD7B4E;
+  --caramel-b: #8A5232;
+  --cream: #FFF1D0;
+  --cream-2: #F3DDB5;
+  --gold-1: #F6E3A8;
+  --gold-2: #C9A24D;
+  --gold-3: #B88A33;
+  --gold: linear-gradient(90deg, var(--gold-3), var(--gold-1) 50%, var(--gold-3));
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+  --max: 1160px;
+  --radius: 20px;
+  --lb-red: #D7262F;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--sans); color: var(--brown); background: #FFFBF2; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 900; line-height: 1.08; margin: 0 0 .5em; letter-spacing: -.01em; }
+h2 { font-size: clamp(2rem, 4.2vw, 3rem); }
+h3 { font-size: 1.4rem; }
+p { margin: 0 0 1em; }
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* "PIPOCA GOURMET" — DM Sans SemiBold, caixa alta, espaçamento amplo, traços laterais dourados */
+.signature {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-weight: 600; font-size: .82rem; letter-spacing: .32em; text-transform: uppercase; color: var(--brown-2);
+}
+.signature::before, .signature::after { content: ""; width: 34px; height: 2px; background: var(--gold); border-radius: 2px; }
+.info { font-weight: 600; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brown-2); }
+
+.stripes { height: 34px; background: repeating-linear-gradient(90deg, var(--brown-2) 0 16px, var(--cream-2) 16px 32px); }
+.stripes.cream { background: repeating-linear-gradient(90deg, var(--caramel-b) 0 16px, var(--cream) 16px 32px); }
+.gold-rule { width: 64px; height: 3px; background: var(--gold); border-radius: 3px; margin: 0 0 22px; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 999px;
+  font-weight: 700; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(90,53,32,.2); }
+.btn-brown { background: var(--brown); color: var(--cream); }
+.btn-cream { background: var(--cream); color: var(--brown); }
+.btn-ghost { border: 2px solid var(--brown); color: var(--brown); }
+
+/* Barra LB Food */
+.lb-bar { background: #fff; border-bottom: 1px solid #EFE3CF; font-size: .9rem; }
+.lb-bar .wrap { display: flex; align-items: center; justify-content: space-between; height: 52px; gap: 12px; }
+.lb-bar a { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #2B1B1B; font-weight: 600; }
+.lb-bar img { height: 26px; width: auto; }
+.lb-bar .back:hover { color: var(--lb-red); }
+
+/* Navegação Pipok */
+.p-nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(255,251,242,.95); backdrop-filter: blur(8px); border-bottom: 1px solid #EFE3CF; }
+.p-nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.p-nav .brand { font-family: var(--serif); font-weight: 900; font-size: 1.7rem; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.p-nav .brand img { width: 38px; height: 38px; object-fit: contain; }
+.p-nav nav { display: flex; gap: 26px; }
+.p-nav nav a { text-decoration: none; font-weight: 600; }
+.p-nav nav a:hover { color: var(--gold-3); }
+
+/* Hero — versão Bege */
+.p-hero { background: linear-gradient(160deg, var(--beige-a), var(--beige-b)); overflow: hidden; }
+.p-hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding-top: 72px; padding-bottom: 80px; }
+.p-hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+.p-hero p { font-size: 1.15rem; color: var(--brown-2); max-width: 38ch; }
+.p-hero .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.p-hero .logo-hero { width: min(520px, 100%); margin: 0 auto; filter: drop-shadow(0 18px 30px rgba(90,53,32,.18)); }
+
+section { padding: 96px 0; }
+
+/* Essência */
+.essence .head { text-align: center; max-width: 700px; margin: 0 auto 52px; }
+.essence .head .gold-rule { margin: 0 auto 22px; }
+.essence .lead { font-size: 1.15rem; color: var(--brown-2); }
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.pillar { background: #fff; border: 1px solid #EBD9B8; border-radius: var(--radius); padding: 32px; position: relative; }
+.pillar .n { font-family: var(--serif); font-weight: 900; font-size: 2.6rem; background: var(--gold); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1; margin-bottom: 12px; }
+.pillar p { color: var(--brown-2); margin: 0; }
+
+/* Produto — versão Caramelo */
+.product { background: linear-gradient(160deg, var(--caramel-a), var(--caramel-b)); color: var(--cream); }
+.product .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center; }
+.product .info, .product .signature { color: var(--cream-2); }
+.product h2 { color: var(--cream); }
+.product p { color: var(--cream-2); font-size: 1.1rem; }
+.product .pack { width: min(360px, 90%); margin: 0 auto; filter: drop-shadow(0 26px 40px rgba(0,0,0,.35)); }
+.features { list-style: none; padding: 0; margin: 26px 0 32px; display: grid; gap: 12px; }
+.features li { display: flex; gap: 12px; align-items: flex-start; }
+.features li::before { content: "✦"; color: var(--gold-1); flex: none; }
+
+/* Galeria */
+.gallery .head { max-width: 640px; margin-bottom: 40px; }
+.gallery-grid { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: auto auto; gap: 22px; }
+.gallery-grid figure { margin: 0; border-radius: var(--radius); overflow: hidden; background: #fff; border: 1px solid #EBD9B8; }
+.gallery-grid img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-grid figcaption { padding: 14px 18px; font-size: .9rem; color: var(--brown-2); }
+.g-big { grid-row: span 2; display: flex; flex-direction: column; }
+.g-big img { flex: 1; min-height: 0; }
+
+/* Onde encontrar */
+.where { background: #fff; }
+.where .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.carts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.carts img { border-radius: var(--radius); aspect-ratio: 2/3; object-fit: cover; width: 100%; }
+.where p { color: var(--brown-2); font-size: 1.08rem; }
+
+/* Rodapé */
+.p-footer { background: var(--brown); color: var(--cream-2); padding: 56px 0 40px; text-align: center; }
+.p-footer .ico { width: 84px; height: 84px; object-fit: contain; margin: 0 auto 14px; }
+.p-footer .name { font-family: var(--serif); font-weight: 900; font-size: 2.4rem; color: var(--cream); line-height: 1; }
+.p-footer .signature { color: var(--cream-2); margin: 10px 0 24px; }
+.p-footer a { color: var(--cream); }
+.p-footer small { display: block; margin-top: 26px; opacity: .8; }
+
+@media (max-width: 900px) {
+  .p-hero .wrap, .product .wrap, .where .wrap { grid-template-columns: 1fr; }
+  .p-hero .wrap { padding-top: 48px; padding-bottom: 56px; text-align: center; }
+  .p-hero p { margin-left: auto; margin-right: auto; }
+  .p-hero .actions { justify-content: center; }
+  .p-hero .logo-hero { order: -1; width: min(380px, 90%); }
+  .pillars { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .g-big { grid-row: auto; }
+  section { padding: 72px 0; }
+}
+@media (max-width: 640px) {
+  .p-nav nav { gap: 16px; font-size: .92rem; }
+  .p-nav nav a.hide-sm { display: none; }
+  .lb-bar .tag { display: none; }
+}
